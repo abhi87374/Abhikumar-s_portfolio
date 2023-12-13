@@ -1,0 +1,192 @@
+$(document).ready(function() {
+    // Show/hide scroll-up button based on scroll position
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 100) {
+        $('#scrollUpBtn').fadeIn();
+      } else {
+        $('#scrollUpBtn').fadeOut();
+      }
+    });
+  
+    // Scroll to top when the button is clicked
+    $('#scrollUpBtn').click(function() {
+      $('html, body').animate({ scrollTop: 0 }, 600);
+      return false;
+    });
+
+      // <!-- emailjs to mail contact form data -->
+      $("#contact-form").submit(function (event) {
+        emailjs.init("pRurRMJVpJIIVXuAp");
+
+        emailjs.sendForm('service_f43o92h', 'template_yjv0nbn', '#contact-form')
+            .then(function (response) {
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById("contact-form").reset();
+                alert("Form Submitted Successfully");
+            }, function (error) {
+                console.log('FAILED...', error);
+                alert("Form Submission Failed! Try Again");
+            });
+        event.preventDefault();
+    });
+    // <!-- emailjs to mail contact form data -->
+  });
+  
+  document.addEventListener("DOMContentLoaded", async function () {
+    const certificatesContainer = document.getElementById("certificatesContainer");
+  
+    // Fetch certificates data from certificates.json
+    const certificatesData = await fetchData("certificates");
+  
+    // Function to create a certificate box
+    function createCertificateBox(certificate) {
+      const box = document.createElement("div");
+      box.className = "box";
+  
+      const img = document.createElement("img");
+      img.src = certificate.image;
+      img.alt = "Certificate Image";
+  
+      const content = document.createElement("div");
+      content.className = "content";
+  
+
+      // const title = document.createElement("h3");
+      // title.textContent = certificate.title;
+  
+      // const description = document.createElement("p");
+      // description.textContent = certificate.description;
+  
+      // content.appendChild(title);
+      // content.appendChild(description);
+  
+      box.appendChild(img);
+    //   box.appendChild(content);
+  
+      return box;
+    }
+  
+    // Render certificates
+    certificatesData.forEach(function (certificate) {
+      const certificateBox = createCertificateBox(certificate);
+      certificatesContainer.appendChild(certificateBox);
+    });
+  });
+  
+  document.addEventListener("DOMContentLoaded", async function () {
+    const skillsContainer = document.getElementById("skillsContainer");
+  
+    // Fetch skills data from skills.json
+    const skillsData = await fetchData("skills");
+  
+    // Function to create a skill box
+    function createSkillBox(skill) {
+      const bar = document.createElement("div");
+      bar.className = "bar";
+  
+      const info = document.createElement("div");
+      info.className = "info";
+  
+      const img = document.createElement("img");
+      img.src = skill.icon;
+      img.alt = skill.name;
+  
+      const span = document.createElement("span");
+      span.textContent = skill.name;
+  
+      info.appendChild(img);
+      info.appendChild(span);
+      bar.appendChild(info);
+  
+      return bar;
+    }
+  
+    // Render skills
+    skillsData.forEach(function (skill) {
+      const skillBox = createSkillBox(skill);
+      skillsContainer.appendChild(skillBox);
+    });
+  });
+  
+  //projects
+  document.addEventListener("DOMContentLoaded", async function () {
+    const projectsContainer = document.getElementById("projectsContainer");
+  
+    // Fetch projects data from projects.json
+    const projectsData = await fetchData("projects");
+  
+    // Function to create a project box
+    function createProjectBox(project) {
+      const box = document.createElement("div");
+      box.className = "box tilt";
+  
+      const img = document.createElement("img");
+      img.draggable = false;
+      img.src = project.image;
+      img.alt = "Project Image";
+  
+      const content = document.createElement("div");
+      content.className = "content";
+  
+      const tag = document.createElement("div");
+      tag.className = "tag";
+  
+      const title = document.createElement("h3");
+      title.textContent = project.title;
+  
+      const desc = document.createElement("div");
+      desc.className = "desc";
+  
+      const descText = document.createElement("p");
+      descText.textContent = project.description;
+  
+      const btns = document.createElement("div");
+      btns.className = "btns";
+  
+      const viewBtn = document.createElement("a");
+      viewBtn.href = project.liveLink;
+      viewBtn.target = "_blank";
+      viewBtn.className = "btn";
+      viewBtn.innerHTML = `<a href="#" class="btn" target="_blank"><i class="fas fa-eye view-icon">View code<i class="fas fa-code"></i></i> </a>
+      `;
+  
+      const codeBtn = document.createElement("a");
+      codeBtn.href = project.codeLink;
+      codeBtn.target = "_blank";
+      codeBtn.className = "btn";
+      codeBtn.innerHTML = ``;
+  
+      // Appending elements
+      tag.appendChild(title);
+      desc.appendChild(descText);
+      btns.appendChild(viewBtn);
+      btns.appendChild(codeBtn);
+      content.appendChild(tag);
+      content.appendChild(desc);
+      content.appendChild(btns);
+      box.appendChild(img);
+      box.appendChild(content);
+  
+      return box;
+    }
+  
+     // Render projects
+  projectsData.forEach(function (project) {
+    const projectBox = createProjectBox(project);
+    projectsContainer.appendChild(projectBox);
+  });
+});
+  
+  
+  // Fetch data function for both skills and certificates
+  async function fetchData(type) {
+    try {
+      const response = await fetch(`${type}.json`);
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      console.error(`Error fetching ${type} data: ${error.message}`);
+      return [];
+    }
+  }
+  
