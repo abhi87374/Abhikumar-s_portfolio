@@ -47,7 +47,7 @@ $(window).on('scroll load', function () {
     
       // <!-- emailjs to mail contact form data -->
       $("#contact-form").submit(function (event) {
-        emailjs.init("pRurRMJVpJIIVXuAp");
+        emailjs.init("MncDYCBhyoqVcP-9F");
 
         emailjs.sendForm('service_f43o92h', 'template_yjv0nbn', '#contact-form')
             .then(function (response) {
