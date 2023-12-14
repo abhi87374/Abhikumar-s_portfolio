@@ -1105,27 +1105,21 @@ form .button-area {
 }
 /* common media queries ends*/
 
-/* scroll top starts */
 
-#scrollUpBtn {
-  display: none;
+/* scroll top starts */
+#scroll-top{
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color:#ffae00;
-  color: rgb(13, 0, 44);
-  border: none;
+  top: -140%;
+  right: 2rem;
   padding: 1rem 1.5rem;
-  border-radius: 80%;
+  font-size: 2rem;
+  background: #ffae00;
+  color: rgb(13, 0, 44);
+  border-radius: 5rem;
   transition: 1s linear;
   z-index: 1000;
-  cursor: pointer;
 }
-
-#scrollUpBtn:hover {
-  background-color: #0056b3;
+#scroll-top.active{
+  top: calc(100% - 12rem);
 }
-
-
-
 /* scroll top ends */
