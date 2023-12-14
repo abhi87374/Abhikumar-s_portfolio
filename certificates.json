@@ -33,7 +33,7 @@
         "image": "./certificates/c11.jpg"
       },
       {
-        "image": "./certificates/C12.jpg"
+        "image": "./certificates/c12.jpg"
       },
       {
         "image": "./certificates/c13.jpg"
@@ -57,6 +57,6 @@
         "image": "./certificates/c19.jpg"
       },
       {
-        "image": "./certificates/c20.jpg"
+        "image": "./certificates/C20.jpg"
       } 
     ]
