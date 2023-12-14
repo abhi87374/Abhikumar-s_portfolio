@@ -1,4 +1,34 @@
 $(document).ready(function() {
+  
+  $('#menu').click(function () {
+    $(this).toggleClass('fa-times');
+    $('.navbar').toggleClass('nav-toggle'); //imp
+});
+
+$(window).on('scroll load', function () {
+    $('#menu').removeClass('fa-times');
+    $('.navbar').removeClass('nav-toggle');
+
+    if (window.scrollY > 60) {
+        document.querySelector('#scroll-top').classList.add('active');
+    } else {
+        document.querySelector('#scroll-top').classList.remove('active');
+    }
+
+    // scroll spy
+    $('section').each(function () {
+        let height = $(this).height();
+        let offset = $(this).offset().top - 200;
+        let top = $(window).scrollTop();
+        let id = $(this).attr('id');
+
+        if (top > offset && top < offset + height) {
+            $('.navbar ul li a').removeClass('active');
+            $('.navbar').find(`[href="#${id}"]`).addClass('active');
+        }
+    });
+});
+
     // Show/hide scroll-up button based on scroll position
     $(window).scroll(function() {
       if ($(this).scrollTop() > 100) {
@@ -14,6 +44,7 @@ $(document).ready(function() {
       return false;
     });
 
+    
       // <!-- emailjs to mail contact form data -->
       $("#contact-form").submit(function (event) {
         emailjs.init("pRurRMJVpJIIVXuAp");
