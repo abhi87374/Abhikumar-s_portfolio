@@ -2,9 +2,16 @@
   {
     "title": "Portfolio Website",
     "image": "./portfolio.png",
-    "description": "Personal portfolio website. Don't need much info about it, just scroll down. You're here only!",
-    "liveLink": "#",  
-    "codeLink": "#"   
+    "description": "A personal portfolio website showcasing my projects, skills, and experience. Built using HTML, CSS, JavaScript with a MongoDB database, and hosted on GitHub Pages.. Don't need much info about it, just scroll down. You're here only! ",
+    "liveLink": "https://abhi87374.github.io/Abhikumar-s_portfolio/",  
+    "codeLink": "https://github.com/abhi87374/Abhikumar-s_portfolio"   
+  },
+  {
+    "title": "Canteen Website",
+    "image": "./canteen.jpeg",
+    "description": "A user-friendly canteen website for college students. This project features an online menu, order tracking, and canteen staff information. Built using HTML, CSS, JavaScript, and PHP with a MySQL database.",
+    "liveLink": "https://collage-canteen-website.000webhostapp.com/",  
+    "codeLink": "https://github.com/abhi87374/Collage-Canteen-Website"   
   }
 
 ]

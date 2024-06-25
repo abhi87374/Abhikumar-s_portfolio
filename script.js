@@ -142,64 +142,91 @@ $(window).on('scroll load', function () {
   //projects
   document.addEventListener("DOMContentLoaded", async function () {
     const projectsContainer = document.getElementById("projectsContainer");
+     // Inject CSS dynamically
+     const style = document.createElement('style');
+     style.innerHTML = `
+     
+       .btn {
+         line-height: 1;
+         display: inline-block;
+         padding: 1.2rem 2rem;
+         border-radius: 0.5rem;
+         font-size: 1.3rem;
+         color: #fff;
+         background: rgb(12, 12, 12);
+         transition: background 0.3s ease;
+         text-align: center;
+         white-space: nowrap;
+         margin-right: 1rem; /* Ensure spacing */
+       }
+ 
+       .btn:hover {
+         background: #310ae0f5;
+       }
+ 
+       .btn i {
+         margin-right: 0.5rem;
+       }
+     `;
+     document.head.appendChild(style);
+
   
     // Fetch projects data from projects.json
     const projectsData = await fetchData("projects");
   
-    // Function to create a project box
-    function createProjectBox(project) {
-      const box = document.createElement("div");
-      box.className = "box tilt";
-  
-      const img = document.createElement("img");
-      img.draggable = false;
-      img.src = project.image;
-      img.alt = "Project Image";
-  
-      const content = document.createElement("div");
-      content.className = "content";
-  
-      const tag = document.createElement("div");
-      tag.className = "tag";
-  
-      const title = document.createElement("h3");
-      title.textContent = project.title;
-  
-      const desc = document.createElement("div");
-      desc.className = "desc";
-  
-      const descText = document.createElement("p");
-      descText.textContent = project.description;
-  
-      const btns = document.createElement("div");
-      btns.className = "btns";
-  
-      const viewBtn = document.createElement("a");
-      viewBtn.href = project.liveLink;
-      viewBtn.target = "_blank";
-      viewBtn.className = "btn";
-      viewBtn.innerHTML = `<a href="#" class="btn" target="_blank"><i class="fas fa-eye view-icon">View code<i class="fas fa-code"></i></i> </a>
-      `;
-  
-      const codeBtn = document.createElement("a");
-      codeBtn.href = project.codeLink;
-      codeBtn.target = "_blank";
-      codeBtn.className = "btn";
-      codeBtn.innerHTML = ``;
-  
-      // Appending elements
-      tag.appendChild(title);
-      desc.appendChild(descText);
-      btns.appendChild(viewBtn);
-      btns.appendChild(codeBtn);
-      content.appendChild(tag);
-      content.appendChild(desc);
-      content.appendChild(btns);
-      box.appendChild(img);
-      box.appendChild(content);
-  
-      return box;
-    }
+ // Function to create a project box
+ function createProjectBox(project) {
+  const box = document.createElement("div");
+  box.className = "box tilt";
+
+  const img = document.createElement("img");
+  img.draggable = false;
+  img.src = project.image;
+  img.alt = "Project Image";
+
+  const content = document.createElement("div");
+  content.className = "content";
+
+  const tag = document.createElement("div");
+  tag.className = "tag";
+
+  const title = document.createElement("h3");
+  title.textContent = project.title;
+
+  const desc = document.createElement("div");
+  desc.className = "desc";
+
+  const descText = document.createElement("p");
+  descText.textContent = project.description;
+
+  const btns = document.createElement("div");
+  btns.className = "btns";
+
+  const viewBtn = document.createElement("a");
+  viewBtn.href = project.liveLink;
+  viewBtn.target = "_blank";
+  viewBtn.className = "btn";
+  viewBtn.innerHTML = `<i class="fas fa-eye"></i> View Project`;
+
+  const codeBtn = document.createElement("a");
+  codeBtn.href = project.codeLink;
+  codeBtn.target = "_blank";
+  codeBtn.className = "btn";
+  codeBtn.innerHTML = `<i class="fas fa-code"></i> View Code`;
+
+  // Appending elements
+  tag.appendChild(title);
+  desc.appendChild(descText);
+  btns.appendChild(viewBtn);
+  btns.appendChild(codeBtn);
+  content.appendChild(tag);
+  content.appendChild(desc);
+  content.appendChild(btns);
+  box.appendChild(img);
+  box.appendChild(content);
+
+  return box;
+}
   
      // Render projects
   projectsData.forEach(function (project) {
