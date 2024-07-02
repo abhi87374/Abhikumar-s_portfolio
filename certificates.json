@@ -1,77 +1,86 @@
- [
-      {
-        "image": "./certificates/c1.jpg"
-      },
-      {
-        "image": "./certificates/c2.jpg"
-      },
-      {
-        "image": "./certificates/c3.jpg"
-      },
-      {
-        "image": "./certificates/c4.png"
-      },
-      {
-        "image": "./certificates/c5.png"
-      },
-      {
-        "image": "./certificates/c6.jpg"
-      },
-      {
-        "image": "./certificates/c7.jpg"
-      },
-      {
-        "image": "./certificates/c8.jpg"
-      },
-      {
-        "image": "./certificates/c9.jpg"
-      },
-      {
-        "image": "./certificates/c10.jpg"
-      },
-      {
-        "image": "./certificates/c11.jpg"
-      },
-      {
-        "image": "./certificates/c12.jpg"
-      },
-      {
-        "image": "./certificates/c13.jpg"
-      },
-      {
-        "image": "./certificates/c14.jpg"
-      },
-      {
-        "image": "./certificates/c15.jpg"
-      },
-      {
-        "image": "./certificates/c16.jpg"
-      },
-      {
-        "image": "./certificates/c17.jpg"
-      },
-      {
-        "image": "./certificates/c18.jpg"
-      },
-      {
-        "image": "./certificates/c19.jpg"
-      },
-      {
-        "image": "./certificates/C20.jpg"
-      },
-      {
-        "image": "./certificates/c21.jpg"
-      },
-      {
-        "image": "./certificates/c22.jpg"
-      },
-      {
-        "image": "./certificates/c23.jpeg"
-      },
-      {
-        "image": "./certificates/c24.jpg"
-      },
-      {
-        "image": "./certificates/c25.jpg"
-      }
-    ]
+[
+ 
+  {
+    "image": "./certificates/c27.jpg"
+  },
+  {
+    "image": "./certificates/c26.jpg"
+  },
+  
+  {
+    "image": "./certificates/c24.jpg"
+  },
+  
+  {
+    "image": "./certificates/c25.jpg"
+  },
+  {
+    "image": "./certificates/c23.jpeg"
+  },
+  {
+    "image": "./certificates/c1.jpg"
+  },
+  {
+    "image": "./certificates/c2.jpg"
+  },
+  {
+    "image": "./certificates/c3.jpg"
+  },
+  {
+    "image": "./certificates/c4.png"
+  },
+  {
+    "image": "./certificates/c5.png"
+  },
+  {
+    "image": "./certificates/c6.jpg"
+  },
+  {
+    "image": "./certificates/c7.jpg"
+  },
+  {
+    "image": "./certificates/c8.jpg"
+  },
+  {
+    "image": "./certificates/c9.jpg"
+  },
+  {
+    "image": "./certificates/c10.jpg"
+  },
+  {
+    "image": "./certificates/c11.jpg"
+  },
+  {
+    "image": "./certificates/c12.jpg"
+  },
+  {
+    "image": "./certificates/c13.jpg"
+  },
+  {
+    "image": "./certificates/c14.jpg"
+  },
+  {
+    "image": "./certificates/c15.jpg"
+  },
+  {
+    "image": "./certificates/c16.jpg"
+  },
+  {
+    "image": "./certificates/c17.jpg"
+  },
+  {
+    "image": "./certificates/c18.jpg"
+  },
+  {
+    "image": "./certificates/c19.jpg"
+  },
+  {
+    "image": "./certificates/C20.jpg"
+  },
+  {
+    "image": "./certificates/c21.jpg"
+  },
+  {
+    "image": "./certificates/c22.jpg"
+  }
+]
