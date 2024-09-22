@@ -373,13 +373,68 @@ header .navbar ul li a:hover {
   height: auto;
   border-radius: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-  mix-blend-mode: hard-light;
   transition: 0.3s;
   cursor: pointer;
+  object-fit: cover; /* Ensures image is always covered */
 }
+
 .about .row .image img:hover {
   mix-blend-mode: normal;
+  transform: scale(1.1); /* Zooms image on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8); /* Increased shadow */
 }
+
+.about .row .image img:focus {
+  outline: 2px solid #007bff; /* Adds focus outline */
+  outline-offset: 2px;
+}
+
+/* Add animation on load */
+.about .row .image img {
+  animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add ripple effect on click */
+.about .row .image img {
+  position: relative;
+}
+
+.about .row .image img:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  opacity: 0.5;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: ripple 1s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 40rem;
+    height: 40rem;
+    opacity: 0;
+  }
+}
+
 .about .row .content {
   flex: 1 1 45rem;
   padding: 3rem;
