@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href=".\style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- A favicon is a small icon associated with a website that is typically displayed in the browser's address bar, next to the site's name in bookmarks, and on the tabs for that site. It serves as a visual representation of the website or web page. Favicon is short for "favorite icon," as it was originally used in bookmark lists to visually identify websites. It helps users quickly identify and differentiate between multiple open tabs or bookmarks. Favicons are usually square in shape and are commonly saved as .ico files. They are an important part of a website's branding and user experience. -->
+  <link id='favicon' rel="shortcut icon" href="./favicon.jpg" type="image/x-png">
+  <title>Portfolio | Abhikumar Gupta</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,8 +29,12 @@
   <title>Portfolio | Abhikumar Gupta</title>
 </head>
 
+
 <body>
   <header>
+    <a href="/" class="logo">
+      <div class="image">
+        <img src="./favicon.jpg" alt="Abhikumar Logo">
     <a href="/" class="logo">
       <div class="image">
         <img src="./favicon.jpg" alt="Abhikumar Logo">
@@ -26,8 +43,10 @@
     </a>
 
 
+
     <div id="menu" class="fas fa-bars"></div>
     <nav class="navbar">
+      <ul>
       <ul>
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -37,7 +56,10 @@
         <li><a href="#certificates">Certificates</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      </ul>
     </nav>
+  </header>
+  <section class="home" id="home">
   </header>
   <section class="home" id="home">
     <div id="particles-js"></div>
@@ -50,7 +72,16 @@
           <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
           <!-- Element to contain animated typing -->
           <span id="element"></span>
+      <h2>Hi There,<br />I'm <span> Abhikumar Gupta</span></h2>
+      <div class="typing-text">
+        <div>and I'm a passionate</div>
+        <div class="element">
+          <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+          <!-- Element to contain animated typing -->
+          <span id="element"></span>
 
+          <!-- Load library from the CDN -->
+          <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
           <!-- Load library from the CDN -->
           <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
@@ -75,9 +106,25 @@
                 class="fab fa-github"></i></a></li>
           <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/a.b_hiii"><i
                 class="fab fa-instagram" target="_blank"></i></a></li>
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/abhikumar-gupta-2440b5218/"
+              target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a class="github" aria-label="GitHub" href="https://github.com/abhi87374" target="_blank"><i
+                class="fab fa-github"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/a.b_hiii"><i
+                class="fab fa-instagram" target="_blank"></i></a></li>
         </ul>
       </div>
     </div>
+    <div class="image">
+      <img draggable="false" class="tilt" src="./developer.png" alt="">
+    </div>
+  </section>
+  <!-- home section ends -->
+  <!-- abt section starts -->
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+
+    <div class="row">
     <div class="image">
       <img draggable="false" class="tilt" src="./developer.png" alt="">
     </div>
@@ -122,7 +169,18 @@
           <a href="https://www.notion.so/Abhikumar-Guptas-Portfolio-8ba34908ddd1485a9ef6b812df2456a5" target="_blank"
             class="btn"><span>Notion PM Portfolio</span>
             <i class="fas fa-chevron-right"></i>
+        </div>
+
+        <div class="resumebtn">
+          <a href="https://drive.google.com/file/d/1ojs8DPsw-DhifSpYaACBTrz7hzSoAn_g/view?usp=sharing" target="_blank"
+            class="btn"><span>Resume</span>
+            <i class="fas fa-chevron-right"></i>
           </a>
+          <a href="https://www.notion.so/Abhikumar-Guptas-Portfolio-8ba34908ddd1485a9ef6b812df2456a5" target="_blank"
+            class="btn"><span>Notion PM Portfolio</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
         </div>
 
       </div>
@@ -131,7 +189,14 @@
   <!-- about section ends -->
   <!-- education section starts -->
   <section class="education" id="education">
+      </div>
+    </div>
+  </section>
+  <!-- about section ends -->
+  <!-- education section starts -->
+  <section class="education" id="education">
 
+    <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
     <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
 
     <p class="qoute">Vidya dhanam sarvadhanam pradhanam</p>
@@ -139,11 +204,16 @@
     <div class="box-container">
 
       <div class="box">
+      <div class="box">
         <div class="content">
           <h3>Bachelor of Technology in Computer Science Engineering</h3>
           <p>Indian Institute of Information Technology Jabalpur</p>
           <h4>2021-2025 | Pursuing</h4>
+          <h3>Bachelor of Technology in Computer Science Engineering</h3>
+          <p>Indian Institute of Information Technology Jabalpur</p>
+          <h4>2021-2025 | Pursuing</h4>
         </div>
+      </div>
       </div>
 
       <div class="box">
@@ -167,12 +237,19 @@
   <!-- education section ends -->
   <!-- skills section starts -->
   <section class="skills" id="skills">
+    </div>
+  </section>
+  <!-- education section ends -->
+  <!-- skills section starts -->
+  <section class="skills" id="skills">
 
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Tools</span></h2>
 
     <div class="container">
       <div class="row" id="skillsContainer">
+      <div class="row" id="skillsContainer">
 
+        <!-- <div class="bar">
         <!-- <div class="bar">
               <div class="info">
                 <img src="https://img.icons8.com/color/48/000000/adobe-xd.png"/>
@@ -189,7 +266,17 @@
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
     <div class="box-container" id="projectsContainer"></div>
   </section>
+    </div>
+  </section>
+  <!-- skills section ends -->
+  <!-- work project section starts -->
+  <section class="work" id="projects">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+    <div class="box-container" id="projectsContainer"></div>
+  </section>
 
+  </div>
+  <!-- <div class="viewall">
   </div>
   <!-- <div class="viewall">
   <a href="/projects" class="btn"><span>View All</span>
@@ -197,6 +284,11 @@
 </a>
 </div> -->
 
+  </section>
+  <!-- work project section ends -->
+  <!-- certificates section starts -->
+  <section class="certificates" id="certificates">
+    <h2 class="heading"><i class="fas fa-certificate"></i> My <span>Certificates</span></h2>
   </section>
   <!-- work project section ends -->
   <!-- certificates section starts -->
@@ -212,7 +304,27 @@
   <section class="contact" id="contact">
 
     <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+    <div class="box-container" id="certificatesContainer">
+      <!-- Certificates will be dynamically added here using JavaScript -->
+    </div>
+  </section>
+  <!-- certificates section ends -->
+  <!-- contact section starts -->
+  <section class="contact" id="contact">
 
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <img draggable="false" src="./contact1.png" alt="">
+        </div>
+        <form id="contact-form">
+
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Name" required>
+              <i class='fas fa-user'></i>
     <div class="container">
       <div class="content">
         <div class="image-box">
@@ -248,19 +360,55 @@
     </div>
   </section>
   <!-- contact section ends -->
+            </div>
+            <div class="field">
+              <input type="text" name="email" placeholder="Email" required>
+              <i class='fas fa-envelope'></i>
+            </div>
+            <div class="field">
+              <input type="text" name="phone" placeholder="Phone">
+              <i class='fas fa-phone-alt'></i>
+            </div>
+            <div class="message">
+              <textarea placeholder="Message" name="message" required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+          </div>
+          <div class="button-area">
+            <button type="submit">
+              Submit <i class="fa fa-paper-plane"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- contact section ends -->
 
   <!-- footer section starts -->
   <section class="footer">
+  <!-- footer section starts -->
+  <section class="footer">
 
+    <div class="box-container">
     <div class="box-container">
 
       <div class="box">
         <h3>Abhikumar's Portfolio</h3>
         <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /> <br />Always try
           to be best version of yourself🚀</p>
+        <h3>Abhikumar's Portfolio</h3>
+        <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br /> <br />Always try
+          to be best version of yourself🚀</p>
       </div>
 
       <div class="box">
+        <h3>quick links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+        <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+        <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+        <a href="#certificates"><i class="fas fa-chevron-circle-right"></i> Certificates</a>
         <h3>quick links</h3>
         <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
         <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
@@ -275,6 +423,10 @@
         <p> <i class="fas fa-envelope"></i>abhi873.official@gmail.com</p>
         <p> <i class="fas fa-map-marked-alt"></i>Raebareli, India-229405</p>
         <div class="share">
+        <h3>contact info</h3>
+        <p> <i class="fas fa-envelope"></i>abhi873.official@gmail.com</p>
+        <p> <i class="fas fa-map-marked-alt"></i>Raebareli, India-229405</p>
+        <div class="share">
 
           <a href="https://www.linkedin.com/in/abhikumar-gupta/" class="fab fa-linkedin" aria-label="LinkedIn"
             target="_blank"></a>
@@ -285,10 +437,16 @@
         </div>
       </div>
     </div>
+    </div>
 
   </section>
   <!-- footer section ends -->
+  </section>
+  <!-- footer section ends -->
 
+  <!-- scroll top btn -->
+  <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+  <!-- scroll back to top -->
   <!-- scroll top btn -->
   <a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
   <!-- scroll back to top -->
@@ -300,10 +458,19 @@
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI/tf1yt1bsM01J7VWQpfwQFYY1Zi5x8vxU5fowA=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+  <!-- scroll reveal anim -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI/tf1yt1bsM01J7VWQpfwQFYY1Zi5x8vxU5fowA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+  <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
   <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
   <script src="./script.js"></script>
+  <script src="./script.js"></script>
 </body>
+
 
 </html>
