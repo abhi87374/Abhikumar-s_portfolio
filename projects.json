@@ -12,6 +12,35 @@
     "description": "A user-friendly canteen website for college students. This project features an online menu, order tracking, and canteen staff information. Built using HTML, CSS, JavaScript, and PHP with a MySQL database.",
     "liveLink": "https://collage-canteen-website.000webhostapp.com/",  
     "codeLink": "https://github.com/abhi87374/Collage-Canteen-Website"   
+  },
+  {
+    "title": "AI-Driven Ad Budget Allocation",
+    "image": "./budget.png",
+    "description": "developed an AI-driven solution for optimizing ad budget allocation across platforms, increasing ROI.Utilized Random Forest and Linear Regression models to predict revenue with 95% accuracy.",
+    "liveLink": "https://abhi87374.github.io/Abhikumar-s_portfolio/#projects",
+    "codeLink": "https://colab.research.google.com/drive/1uJPiDI4AztZo6yWEQAmiBTR1JbdLrYBZ#scrollTo=kUgwgR9U6e-4"   
+  }
+  ,
+  {
+    "title": "Data Visualisation Dashboard",
+    "image": "./datamoc.png",
+    "description": "developed an AI-driven solution for optimizing ad budget allocation across platforms, increasing ROI.Utilized Random Forest and Linear Regression models to predict revenue with 95% accuracy.",
+    "liveLink": "https://abhi87374.github.io/Abhikumar-s_portfolio/#projects",
+        "codeLink": "https://github.com/abhi87374/Data-Visualization-Dashboard"   
+  },
+  {
+    "title": "Stone Paper Scissor Game",
+    "image": "./stone.png",
+    "description": "Created a browser-based game with two difficulty levels and score tracking functionality. Technologies: HTML, CSS, JavaScript.",
+    "liveLink": "https://abhi87374.github.io/Abhikumar-s_portfolio/#projects",
+    "codeLink": "https://github.com/abhi87374/Data-Visualization-Dashboard"   
+  },
+  {
+    "title": "Responsive Web Page",
+    "image": "./responsive.png",
+    "description": " A responsive web page designed to be mobile-friendly and adaptable to various screen sizes. Utilizes modern CSS techniques and JavaScript for dynamic content.",
+    "liveLink": "https://abhi87374.github.io/responsive_page/",  
+    "codeLink": "https://github.com/abhi87374/responsive_page"   
   }
 
 ]
